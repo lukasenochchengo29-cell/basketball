@@ -64,8 +64,6 @@ reset.onclick = function () {
   document.getElementById("foulA").textContent = foul;
   document.getElementById("foulB").textContent = foul1;
 };
-
-//vibe coded
 let countdown;
 let timeLeft;
 let isPaused = false;
