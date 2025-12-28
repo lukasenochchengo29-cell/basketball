@@ -116,5 +116,5 @@ resetBtnTime.addEventListener("click", () => {
   clearInterval(countdown);
   timeLeft = 0;
   updateDisplay(0);
-  minutesInput.value = "0";
+  minutesInput.value = "";
 });
