@@ -65,8 +65,9 @@ reset.onclick = function () {
   document.getElementById("foulB").textContent = foul1;
 };
 let countdown;
-let timeLeft;
+let timeLeft = 0;
 let isPaused = false;
+let lastSetTime = 0;
 
 const timerDisplay = document.getElementById("timer-display");
 const minutesInput = document.getElementById("minutesInput");
@@ -83,38 +84,52 @@ function updateDisplay(seconds) {
   }${s}`;
 }
 
+function flashRed() {
+  timerDisplay.style.color = "red";
+  setTimeout(() => {
+    timerDisplay.style.color = "#00ff00";
+  }, 500);
+}
+
+function startTimer() {
+  if (timeLeft <= 0) return;
+
+  clearInterval(countdown);
+  isPaused = false;
+
+  countdown = setInterval(() => {
+    if (!isPaused && timeLeft > 0) {
+      timeLeft--;
+      updateDisplay(timeLeft);
+      if (timeLeft === 0) {
+        flashRed();
+        clearInterval(countdown);
+      }
+    }
+  }, 1000);
+}
+
 setTime.addEventListener("click", () => {
   clearInterval(countdown);
   const mins = parseInt(minutesInput.value);
   if (!isNaN(mins) && mins > 0) {
     timeLeft = mins * 60;
+    lastSetTime = timeLeft;
     updateDisplay(timeLeft);
+    isPaused = true;
   }
 });
 
-startBtn.addEventListener("click", () => {
-  if (!timeLeft || (countdown && !isPaused)) return;
-
-  isPaused = false;
-  clearInterval(countdown);
-
-  countdown = setInterval(() => {
-    timeLeft--;
-    updateDisplay(timeLeft);
-    if (timeLeft <= 0) {
-      clearInterval(countdown);
-    }
-  }, 1000);
-});
+startBtn.addEventListener("click", startTimer);
 
 pause.addEventListener("click", () => {
   isPaused = true;
-  clearInterval(countdown);
 });
 
 resetBtnTime.addEventListener("click", () => {
   clearInterval(countdown);
-  timeLeft = 0;
-  updateDisplay(0);
+  timeLeft = lastSetTime || 0;
+  updateDisplay(timeLeft);
   minutesInput.value = "";
+  isPaused = true;
 });
