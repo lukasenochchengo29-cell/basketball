@@ -128,7 +128,7 @@ pause.addEventListener("click", () => {
 
 resetBtnTime.addEventListener("click", () => {
   clearInterval(countdown);
-  timeLeft = lastSetTime || 0;
+  timeLeft = 0;
   updateDisplay(timeLeft);
   minutesInput.value = "";
   isPaused = true;
