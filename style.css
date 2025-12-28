@@ -1,0 +1,152 @@
+body {
+  text-align: center;
+}
+#main {
+  display: inline-flex;
+  padding: 20px;
+  gap: 50px;
+  background-color: aquamarine;
+}
+#left {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  background-color: goldenrod;
+  padding: 15px;
+  grid-row: 5;
+  grid-column: 5;
+  display: block;
+  min-height: fit-content;
+  min-width: 200px;
+  border-radius: 8px;
+}
+#right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  background-color: goldenrod;
+  padding: 15px;
+  grid-column: 10;
+  grid-row: 5;
+  display: block;
+  margin-top: 3;
+  min-height: fit-content;
+  min-width: 200px;
+  border-radius: 8px;
+}
+#minusOne {
+  background-color: blueviolet;
+  border-radius: 90%;
+  border-color: black;
+}
+#plusTwo {
+  background-color: blueviolet;
+  border-radius: 90%;
+  border-color: black;
+}
+#plusThree {
+  background-color: blueviolet;
+  border-radius: 90%;
+  border-color: black;
+}
+#minusOne2 {
+  background-color: blueviolet;
+  border-radius: 90%;
+  border-color: black;
+}
+#plusTwo2 {
+  background-color: blueviolet;
+  border-radius: 90%;
+  border-color: black;
+}
+#plusThree2 {
+  background-color: blueviolet;
+  border-radius: 90%;
+  border-color: black;
+}
+h1 {
+  text-align: center;
+  justify-content: center;
+  text-decoration: underline;
+}
+#resultsOne {
+  font-size: 10em;
+}
+#resultsTwo {
+  font-size: 10em;
+}
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+#fouls {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: goldenrod;
+  min-height: fit-content;
+  min-width: 200px;
+  border-radius: 8px;
+}
+#foulAddTeamA {
+  background-color: blueviolet;
+  cursor: pointer;
+}
+#foulSubtractTeamA {
+  background-color: blueviolet;
+  cursor: pointer;
+}
+#foulAddTeamB {
+  background-color: blueviolet;
+  cursor: pointer;
+}
+#foulSubtractTeamB {
+  background-color: blueviolet;
+  cursor: pointer;
+}
+#foulA {
+  font-size: 3em;
+}
+#foulB {
+  font-size: 3em;
+}
+#resetBtn {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-width: 100px;
+  background-color: goldenrod;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 3em;
+  font-family: monospace;
+  font-weight: bolder;
+  text-decoration: wavy;
+}
+.timer-container {
+  text-align: center;
+  font-family: monospace;
+  background: #1a1a1a;
+  color: #00ff00;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+}
+#timer-display {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+#minutesInput {
+  width: 60px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.timer-container button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+#timer {
+  display: grid;
+}
+.actions {
+  border-radius: 8px;
+  color: blueviolet;
+}
