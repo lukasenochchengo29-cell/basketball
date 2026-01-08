@@ -35,7 +35,7 @@ body {
   min-width: 200px;
   border-radius: 8px;
 }
-#minusOne {
+#plusOne {
   background-color: blueviolet;
   border-radius: 90%;
   border-color: black;
@@ -50,7 +50,7 @@ body {
   border-radius: 90%;
   border-color: black;
 }
-#minusOne2 {
+#plusOne2 {
   background-color: blueviolet;
   border-radius: 90%;
   border-color: black;

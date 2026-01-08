@@ -1,7 +1,7 @@
-const minusOne = document.getElementById("minusOne");
+const plusOne = document.getElementById("plusOne");
 const plusTwo = document.getElementById("plusTwo");
 const plusThree = document.getElementById("plusThree");
-const minusOne2 = document.getElementById("minusOne2");
+const plususOne2 = document.getElementById("plusOne2");
 const plusTwo2 = document.getElementById("plusTwo2");
 const plusThree2 = document.getElementById("plusThree2");
 const foulAddTeamA = document.getElementById("foulAddTeamA");
@@ -14,8 +14,8 @@ let count1 = 0;
 let foul = 0;
 let foul1 = 0;
 
-minusOne.onclick = function () {
-  count--;
+plusOne.onclick = function () {
+  count++;
   document.getElementById("resultsOne").textContent = count;
 };
 plusTwo.onclick = function () {
@@ -26,8 +26,8 @@ plusThree.onclick = function () {
   count = count + 3;
   document.getElementById("resultsOne").textContent = count;
 };
-minusOne2.onclick = function () {
-  count1--;
+plusOne2.onclick = function () {
+  count1++;
   document.getElementById("resultsTwo").textContent = count1;
 };
 plusTwo2.onclick = function () {
